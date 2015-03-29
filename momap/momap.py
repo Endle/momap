@@ -44,6 +44,14 @@ class momap(object):
             self._dict[key].append(value)
         else:
             self._dict[key] = [value]
+    def extend(self, key, values):
+        '''Extend this list
+        '''
+        if key in self._dict:
+            self._dict[key].extend(values)
+        else:
+            self._dict[key] = values
+
 
     def get_list(self, key):
         return self._dict[key]

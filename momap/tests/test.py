@@ -47,6 +47,10 @@ class Test_momap(unittest.TestCase):
         li = list(m.items())
         self.assertEqual(li, [('a', [1, 2]), ('b', [2]), ('c', [4])])
 
+    def test_extend(self):
+        m = momap.momap([('a', 1), ('b', 2)])
+        m.extend('a', [2, 5, "tree"])
+        self.assertEqual(repr(m), "momap{a: [1, 2, 5, 'tree'], b: [2]}")
 
 if __name__ == '__main__':
     unittest.main()
