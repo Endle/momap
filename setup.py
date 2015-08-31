@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='momap',
-    version='0.01.b',
+    version='0.01.c',
     packages=['momap'],
 
     install_requires=['sortedcontainers'],

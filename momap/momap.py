@@ -20,9 +20,13 @@ class momap(object):
         '''
         self._dict[key] = [value]
     def __getitem__(self, key):
-        '''Return the first element of the key
+        '''Return one element
+            Or a list which has more than one element
         '''
-        return self._dict[key][0]
+        if len(self._dict[key]) == 1:
+            return self._dict[key][0]
+        else:
+            return self._dict[key]
     def __contains__(self, key):
         return self._dict.__contains__(key)
 
