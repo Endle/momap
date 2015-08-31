@@ -1,7 +1,8 @@
 import unittest
-import sys
-sys.path.append("../")
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import momap
+print(momap.__path__)
 
 class Test_momap(unittest.TestCase):
     def test_init(self):
