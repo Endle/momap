@@ -21,7 +21,8 @@ class Test_momap(unittest.TestCase):
         self.assertEqual(m['a'], [5, 7])
         self.assertEqual(repr(m), "momap{a: [5, 7]}")
         m['a'] = 5
-        m.add('a', [7, 5])
+        m.add('a', 7)
+        self.assertEqual(repr(m), "momap{a: [5, 7]}")
 
     def test_contains(self):
         m = momap.momap([('a', 1), ('b', 2), ('c', 4), ('a', 2)])
